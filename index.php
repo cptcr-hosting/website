@@ -1,6 +1,6 @@
 <?php
 // index.php
-$adminApiKey = "";
+$adminApiKey = "ptlc_XIH5objdK1IsYdhTX4txokHwD6FUjYiE8Q9TpXvGxVC";
 
 function fetchApiData($url, $adminApiKey) {
     $options = [
@@ -33,7 +33,7 @@ $server_count = isset($serverData['meta']['pagination']['total']) ? $serverData[
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1" />
   <meta name="description" content="CPTCR Hosting – German-based hosting solutions: free servers, VPS, Minecraft, Discord bot, and database hosting with transparent pricing and robust security." />
-  <meta name="keywords" content="CPTCR Hosting, hosting, VPS, Minecraft, Discord bot, database hosting, free servers, transparent pricing, secure hosting" />
+  <meta name="keywords" content="CPTCR Hosting, hosting, VPS, Minecraft, Discord bot, database hosting, free servers, transparent pricing, secure hosting, free, discord, bot, developers, coding, software, server, free hoster" />
   <meta name="author" content="CPTCR Hosting" />
   <title>CPTCR Hosting | Empowering Your Digital Future</title>
   
@@ -104,33 +104,6 @@ $server_count = isset($serverData['meta']['pagination']['total']) ? $serverData[
     a.btn:hover {
       background: #d13f55;
     }
-    /* Minimal dark navbar with accent links */
-    .navbar {
-      background: #000;
-      opacity: 0.95;
-      box-shadow: 0 2px 10px rgba(0,0,0,0.7);
-    }
-    .navbar a {
-      color: #E94560;
-      font-weight: 600;
-      transition: color 0.3s ease;
-      font-size: 1rem;
-    }
-    .navbar a:hover {
-      color: #fff;
-    }
-    /* Mobile menu transitions */
-    #mobile-menu {
-      transition: max-height 0.3s ease-in-out;
-    }
-    #mobile-menu ul {
-      padding: 0.5rem;
-    }
-    #mobile-menu li {
-      margin: 0.25rem 0;
-      font-size: 0.9rem;
-      text-align: center;
-    }
     /* Custom scrollbar */
     ::-webkit-scrollbar {
       width: 8px;
@@ -145,40 +118,47 @@ $server_count = isset($serverData['meta']['pagination']['total']) ? $serverData[
   </style>
 </head>
 <body class="antialiased">
-  <!-- Simplified Navbar with only the most important links -->
-  <nav class="navbar fixed top-0 left-0 w-full z-50 py-4">
-    <div class="container mx-auto flex justify-between items-center px-6">
-      <a href="#home" class="text-xl md:text-2xl font-bold">CPTCR Hosting</a>
-      <div class="hidden md:flex items-center space-x-4">
-        <a href="#feature1">Overview</a>
-        <a href="#feature2">Services</a>
-        <a href="#feature4">Pricing</a>
-        <a href="#feature9">Community</a>
-        <a href="#feature10">Vision</a>
-        <a href="#ping">Ping Test</a>
-      </div>
-      <div class="md:hidden">
-        <button id="menu-btn" class="focus:outline-none">
-          <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
-                  d="M4 6h16M4 12h16M4 18h16"></path>
-          </svg>
-        </button>
+  <!-- Updated Navbar -->
+  <nav class="bg-black bg-opacity-75 fixed top-0 left-0 w-full z-50 backdrop-blur-lg shadow-lg">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+      <div class="flex justify-between items-center h-16">
+        <!-- Logo -->
+        <div class="flex-shrink-0">
+          <a href="#home" class="text-2xl font-extrabold text-white">CPTCR Hosting</a>
+        </div>
+        <!-- Desktop Navigation -->
+        <div class="hidden md:flex space-x-8">
+          <a href="/" class="text-base font-medium text-white hover:text-accent transition duration-150 ease-in-out">Overview</a>
+          <a href="/services" class="text-base font-medium text-white hover:text-accent transition duration-150 ease-in-out">Services</a>
+          <a href="/about-us" class="text-base font-medium text-white hover:text-accent transition duration-150 ease-in-out">About Us</a>
+          <a href="/roadmap" class="text-base font-medium text-white hover:text-accent transition duration-150 ease-in-out">Roadmap</a>
+          <a href="/contact" class="text-base font-medium text-white hover:text-accent transition duration-150 ease-in-out">Contact</a>
+          <a href="/discord" class="text-base font-medium text-white hover:text-accent transition duration-150 ease-in-out">Discord</a>
+        </div>
+        <!-- Mobile Menu Button -->
+        <div class="md:hidden">
+          <button id="menu-btn" class="text-white focus:outline-none">
+            <svg class="h-6 w-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+              <path id="menu-icon" stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                d="M4 6h16M4 12h16M4 18h16" />
+            </svg>
+          </button>
+        </div>
       </div>
     </div>
-    <!-- Mobile Menu -->
-    <div id="mobile-menu" class="hidden md:hidden max-h-0 overflow-hidden">
-      <ul class="space-y-1 text-sm">
-        <li><a href="#feature1" class="block">Overview</a></li>
-        <li><a href="#feature2" class="block">Services</a></li>
-        <li><a href="#feature4" class="block">Pricing</a></li>
-        <li><a href="#feature9" class="block">Community</a></li>
-        <li><a href="#feature10" class="block">Vision</a></li>
-        <li><a href="#ping" class="block">Ping Test</a></li>
-      </ul>
+    <!-- Mobile Navigation Menu -->
+    <div id="mobile-menu" class="md:hidden transition-all duration-300 ease-in-out max-h-0 overflow-hidden">
+      <div class="px-2 pt-2 pb-3 space-y-1 sm:px-3">
+        <a href="/" class="block px-3 py-2 rounded-md text-base font-medium text-white hover:bg-gray-700 transition">Overview</a>
+        <a href="/services" class="block px-3 py-2 rounded-md text-base font-medium text-white hover:bg-gray-700 transition">Services</a>
+        <a href="/about-us" class="block px-3 py-2 rounded-md text-base font-medium text-white hover:bg-gray-700 transition">About Us</a>
+        <a href="/roadmap" class="block px-3 py-2 rounded-md text-base font-medium text-white hover:bg-gray-700 transition">Roadmap</a>
+        <a href="/contact" class="block px-3 py-2 rounded-md text-base font-medium text-white hover:bg-gray-700 transition">Contact</a>
+        <a href="/discord" class="block px-3 py-2 rounded-md text-base font-medium text-white hover:bg-gray-700 transition">Discord</a>
+      </div>
     </div>
   </nav>
-
+  
   <!-- Hero Section -->
   <section id="home" class="pt-28 pb-16 container mx-auto text-center animate-fadeIn">
     <h1 class="text-5xl md:text-7xl font-extrabold mb-4">
@@ -190,18 +170,13 @@ $server_count = isset($serverData['meta']['pagination']['total']) ? $serverData[
     <a href="https://cptcr.shop" class="btn">Launch Your Project</a>
   </section>
 
-  <!-- Features: Use flex-col, md:flex-row for odd, and md:flex-row-reverse for even.
-       That ensures on mobile (default) the title is above the glass box,
-       while on larger screens the layout alternates. -->
-
-  <!-- Feature #1 (Odd) => md:flex-row -->
+  <!-- Feature Sections -->
+  <!-- Feature #1 -->
   <section id="feature1" class="container mx-auto py-12 animate-fadeIn">
     <div class="flex flex-col md:flex-row gap-6 text-center md:text-left">
-      <!-- Title left (no box) -->
       <div class="w-full md:w-1/2 flex flex-col justify-center">
         <h2 class="text-4xl md:text-5xl font-bold text-accent">CPTCR Hosting Overview</h2>
       </div>
-      <!-- Desc right (glass + button) -->
       <div class="w-full md:w-1/2">
         <div class="glass p-6">
           <p class="mb-4 text-lg">
@@ -213,14 +188,12 @@ $server_count = isset($serverData['meta']['pagination']['total']) ? $serverData[
     </div>
   </section>
 
-  <!-- Feature #2 (Even) => md:flex-row-reverse -->
+  <!-- Feature #2 -->
   <section id="feature2" class="container mx-auto py-12 animate-fadeIn">
     <div class="flex flex-col md:flex-row-reverse gap-6 text-center md:text-right">
-      <!-- Title (no box) on the "right" for large screens, but first in HTML on mobile -->
       <div class="w-full md:w-1/2 flex flex-col justify-center">
         <h2 class="text-4xl md:text-5xl font-bold text-accent">Our Services</h2>
       </div>
-      <!-- Desc (glass + button) on the "left" for large screens -->
       <div class="w-full md:w-1/2">
         <div class="glass p-6">
           <p class="mb-4 text-lg">
@@ -232,7 +205,7 @@ $server_count = isset($serverData['meta']['pagination']['total']) ? $serverData[
     </div>
   </section>
 
-  <!-- Feature #3 (Odd) => md:flex-row -->
+  <!-- Feature #3 -->
   <section id="feature3" class="container mx-auto py-12 animate-fadeIn">
     <div class="flex flex-col md:flex-row gap-6 text-center md:text-left">
       <div class="w-full md:w-1/2 flex flex-col justify-center">
@@ -249,7 +222,7 @@ $server_count = isset($serverData['meta']['pagination']['total']) ? $serverData[
     </div>
   </section>
 
-  <!-- Feature #4 (Even) => md:flex-row-reverse -->
+  <!-- Feature #4 -->
   <section id="feature4" class="container mx-auto py-12 animate-fadeIn">
     <div class="flex flex-col md:flex-row-reverse gap-6 text-center md:text-right">
       <div class="w-full md:w-1/2 flex flex-col justify-center">
@@ -266,7 +239,7 @@ $server_count = isset($serverData['meta']['pagination']['total']) ? $serverData[
     </div>
   </section>
 
-  <!-- Feature #5 (Odd) => md:flex-row -->
+  <!-- Feature #5 -->
   <section id="feature5" class="container mx-auto py-12 animate-fadeIn">
     <div class="flex flex-col md:flex-row gap-6 text-center md:text-left">
       <div class="w-full md:w-1/2 flex flex-col justify-center">
@@ -283,7 +256,7 @@ $server_count = isset($serverData['meta']['pagination']['total']) ? $serverData[
     </div>
   </section>
 
-  <!-- Feature #6 (Even) => md:flex-row-reverse -->
+  <!-- Feature #6 -->
   <section id="feature6" class="container mx-auto py-12 animate-fadeIn">
     <div class="flex flex-col md:flex-row-reverse gap-6 text-center md:text-right">
       <div class="w-full md:w-1/2 flex flex-col justify-center">
@@ -300,7 +273,7 @@ $server_count = isset($serverData['meta']['pagination']['total']) ? $serverData[
     </div>
   </section>
 
-  <!-- Feature #7 (Odd) => md:flex-row -->
+  <!-- Feature #7 -->
   <section id="feature7" class="container mx-auto py-12 animate-fadeIn">
     <div class="flex flex-col md:flex-row gap-6 text-center md:text-left">
       <div class="w-full md:w-1/2 flex flex-col justify-center">
@@ -317,7 +290,7 @@ $server_count = isset($serverData['meta']['pagination']['total']) ? $serverData[
     </div>
   </section>
 
-  <!-- Feature #8 (Even) => md:flex-row-reverse -->
+  <!-- Feature #8 -->
   <section id="feature8" class="container mx-auto py-12 animate-fadeIn">
     <div class="flex flex-col md:flex-row-reverse gap-6 text-center md:text-right">
       <div class="w-full md:w-1/2 flex flex-col justify-center">
@@ -334,7 +307,7 @@ $server_count = isset($serverData['meta']['pagination']['total']) ? $serverData[
     </div>
   </section>
 
-  <!-- Feature #9 (Odd) => md:flex-row -->
+  <!-- Feature #9 -->
   <section id="feature9" class="container mx-auto py-12 animate-fadeIn">
     <div class="flex flex-col md:flex-row gap-6 text-center md:text-left">
       <div class="w-full md:w-1/2 flex flex-col justify-center">
@@ -351,7 +324,7 @@ $server_count = isset($serverData['meta']['pagination']['total']) ? $serverData[
     </div>
   </section>
 
-  <!-- Feature #10 (Even) => md:flex-row-reverse -->
+  <!-- Feature #10 -->
   <section id="feature10" class="container mx-auto py-12 animate-fadeIn">
     <div class="flex flex-col md:flex-row-reverse gap-6 text-center md:text-right">
       <div class="w-full md:w-1/2 flex flex-col justify-center">
@@ -368,11 +341,11 @@ $server_count = isset($serverData['meta']['pagination']['total']) ? $serverData[
     </div>
   </section>
 
-  <!-- Services Section (7 services, also alternating) -->
+  <!-- Services Section -->
   <section id="services" class="container mx-auto py-16 animate-fadeIn">
     <h2 class="text-5xl font-bold text-center mb-8 text-accent">All Services</h2>
 
-    <!-- Service #1 (Odd) => md:flex-row -->
+    <!-- Service #1 -->
     <div class="flex flex-col md:flex-row gap-6 mb-8 text-center md:text-left">
       <div class="w-full md:w-1/2 flex flex-col justify-center">
         <h3 class="text-3xl md:text-4xl font-bold text-accent">Free Hosting</h3>
@@ -387,7 +360,7 @@ $server_count = isset($serverData['meta']['pagination']['total']) ? $serverData[
       </div>
     </div>
 
-    <!-- Service #2 (Even) => md:flex-row-reverse -->
+    <!-- Service #2 -->
     <div class="flex flex-col md:flex-row-reverse gap-6 mb-8 text-center md:text-right">
       <div class="w-full md:w-1/2 flex flex-col justify-center">
         <h3 class="text-3xl md:text-4xl font-bold text-accent">VPS Hosting</h3>
@@ -402,7 +375,7 @@ $server_count = isset($serverData['meta']['pagination']['total']) ? $serverData[
       </div>
     </div>
 
-    <!-- Service #3 (Odd) => md:flex-row -->
+    <!-- Service #3 -->
     <div class="flex flex-col md:flex-row gap-6 mb-8 text-center md:text-left">
       <div class="w-full md:w-1/2 flex flex-col justify-center">
         <h3 class="text-3xl md:text-4xl font-bold text-accent">Mini VPS</h3>
@@ -417,7 +390,7 @@ $server_count = isset($serverData['meta']['pagination']['total']) ? $serverData[
       </div>
     </div>
 
-    <!-- Service #4 (Even) => md:flex-row-reverse -->
+    <!-- Service #4 -->
     <div class="flex flex-col md:flex-row-reverse gap-6 mb-8 text-center md:text-right">
       <div class="w-full md:w-1/2 flex flex-col justify-center">
         <h3 class="text-3xl md:text-4xl font-bold text-accent">Database Hosting</h3>
@@ -432,7 +405,7 @@ $server_count = isset($serverData['meta']['pagination']['total']) ? $serverData[
       </div>
     </div>
 
-    <!-- Service #5 (Odd) => md:flex-row -->
+    <!-- Service #5 -->
     <div class="flex flex-col md:flex-row gap-6 mb-8 text-center md:text-left">
       <div class="w-full md:w-1/2 flex flex-col justify-center">
         <h3 class="text-3xl md:text-4xl font-bold text-accent">Software Hosting</h3>
@@ -447,7 +420,7 @@ $server_count = isset($serverData['meta']['pagination']['total']) ? $serverData[
       </div>
     </div>
 
-    <!-- Service #6 (Even) => md:flex-row-reverse -->
+    <!-- Service #6 -->
     <div class="flex flex-col md:flex-row-reverse gap-6 mb-8 text-center md:text-right">
       <div class="w-full md:w-1/2 flex flex-col justify-center">
         <h3 class="text-3xl md:text-4xl font-bold text-accent">Coding-Language Hosting</h3>
@@ -462,7 +435,7 @@ $server_count = isset($serverData['meta']['pagination']['total']) ? $serverData[
       </div>
     </div>
 
-    <!-- Service #7 (Odd) => md:flex-row -->
+    <!-- Service #7 -->
     <div class="flex flex-col md:flex-row gap-6 text-center md:text-left">
       <div class="w-full md:w-1/2 flex flex-col justify-center">
         <h3 class="text-3xl md:text-4xl font-bold text-accent">Game Hosting</h3>
@@ -526,6 +499,9 @@ $server_count = isset($serverData['meta']['pagination']['total']) ? $serverData[
       <p class="text-gray-400 text-base md:text-lg">&copy; <?php echo date("Y"); ?> CPTCR Hosting. All rights reserved.</p>
       <p class="text-gray-500 text-sm mt-2">
         Contact us at <a href="mailto:support@cptcr.cc" class="text-accent">support@cptcr.cc</a>
+      </p> <br>
+      <p class="text-gray-500 text-sm mt-2">
+        <a href="/legal" class="text-accent">Legal Pages</a>
       </p>
     </div>
   </footer>
@@ -536,12 +512,11 @@ $server_count = isset($serverData['meta']['pagination']['total']) ? $serverData[
     const mobileMenu = document.getElementById('mobile-menu');
 
     menuBtn.addEventListener('click', () => {
-      mobileMenu.classList.toggle('hidden');
-      // Smooth toggle for max-height
-      if (mobileMenu.classList.contains('hidden')) {
-        mobileMenu.style.maxHeight = '0';
+      // Toggle the max-height to enable a smooth open/close transition
+      if (mobileMenu.style.maxHeight && mobileMenu.style.maxHeight !== "0px") {
+        mobileMenu.style.maxHeight = "0px";
       } else {
-        mobileMenu.style.maxHeight = mobileMenu.scrollHeight + 'px';
+        mobileMenu.style.maxHeight = mobileMenu.scrollHeight + "px";
       }
     });
   </script>
